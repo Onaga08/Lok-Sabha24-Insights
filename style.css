@@ -55,3 +55,8 @@ img{
     height: 400px;
     margin-left: 160px;
 }
+.star-bullet::before{   
+    content: '★'; 
+    color: gold; 
+    margin-right: 10px; 
+}
