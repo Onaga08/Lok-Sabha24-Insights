@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lok Sabha Elections 2024 </title>
+</head>
+<body>
+    <div class="major">
+        <h1 class="Report-Title">Data Insights Report on Lok Sabha Elections 2024</h1>
+        <h2 class="Report-Subtitle">Created by - Pradyumn Prakash Srivastava<br>
+            Data Gathered from ECI Govt. Of India Website</h2>
+
+            <div class="Abstract">
+                <h2 class="Abstract-Title">Abstract</h2>
+                <p class="Abstract-Content">Thank you for taking the time to read this report. </p>
+                <p class="Abstract-Content"> Lok Sabha Elections
+                    are a great ordeal in India. The elections of 2024 was held in 7 phases, starting from April 19,
+                    with results released on June 4. Polling is done through EVM machines in India, and all citizens above 
+                    the age of 18 are requested to participate.</p>
+                </p>
+                <p class="Abstract-Content">
+                    The task at hand, given to me by Kalvium, as a Pre-placement task is to scrap data from the official
+                    ECI website, and draw certain insights from the data gathered. I used Python Libraries like BeautifulSoup for scarping, 
+                    and Selenium for Automation of user behaviour for different navigation, loops and effective scraping. I also used other 
+                    libraries to manipulate data, stored in the form of csv files, and to visualize them. I used Tableau, primarily to 
+                    create interactive visualizations to demonstrate the insights and trends I was able to derive.
+                </p>
+                <p class="Abstract-Content">Thus, this report contains the methodology used to gather the data, preprocessing steps, and finally the visualizations
+                    and insights derived from the said data. The primary reason of making this web-based report was to utilize the 
+                tableau's embed feature to make use of it's interactive visualization designs. </p>
+                <p class="Abstract-Content">Thank you for reading!</p>
+            </div><!--Abstract closing div-->
+            <div class="Contents">
+                <h2 class="Contents-Title">Contents</h2>
+                <ul class="Contents-Content">
+                    <li><a href="#Problem_Statement">Problem Statement</a></li>
+                    <li><a href="#Objectives">Objectives</a></li>
+                    <li><a href="#Flowchart">FlowChart</a></li>
+                    <li><a href="#Methodology">Methodology</a></li>
+                    <li><a href="#Insights">Insights Derived</a></li>
+                    <li><a href="#Conclusion">Conclusion</a></li>
+                </ul>
+            </div><!--Contents closing div-->
+            <div class="Problem_Statement" id="Problem_Statement">
+                <h2 class="Problem_Statement-Title">Problem Statement</h2>
+                <p class="Problem_Statement-Content">In recent years, the complexity and volume of electoral data have significantly
+                    increased. This influx makes it imperative to develop robust methodologies for data collection, processing, and 
+                    visualization. The goal of visualization - is obviously to derive information and insights, not usually identifiable 
+                    by directly looking at the data.
+                </p>
+                <p class="Problem_Statement-Content">
+                    The goal of this project is to gather, process, and analyze electoral data from various states in India to 
+                    derive meaningful insights that can aid political analysts, researchers, and the general public in understanding 
+                    voting patterns, party dominance, and electoral dynamics across the country.
+                </p>
+                <p class="Problem_Statement-Content">
+                    A combination of Web-Scraping using Selenium and BeautifulSoup; preprocessing methods using different python libraries;
+                    visualizations using Tableau, and representation of the report using Front-End Web Development; was utilized in successfully 
+                    completing this project.
+                </p>
+            </div><!--Problem_Statement closing div-->
+            <div class="Objectives" id="Objectives">
+                <h2 class="Objectives-Title">Objectives</h1>
+                <ul class="Objectives-Content">
+                    <li><b style="text-decoration: underline dotted black;">Data Collection</b> : Scraping of Data from ECI Website. 
+                        Scraped National Seat Distribution, State-wise Seat Distribution, and Contituency winners along with No. of votes and majority votes.</li>
+                    <li><b style="text-decoration: underline dotted black;">Data Preprocessing</b> : Preprocess data to produce different
+                    Structures. For eg- Combined constituency lists of all states to display stats about alll 543 constituencies.</li>
+                    <li><b style="text-decoration: underline dotted black;">Data visualization</b> : Visualization of processed data using 
+                    Tableau :- Created Interactive Map Visualizations and other simple graphs.</li>
+                    <li><b style="text-decoration: underline dotted black;">Insights Derivation</b> : Draw Insightful Informations and 
+                    conclusions using processed data and visualizations</li>
+                    <li><b style="text-decoration: underline dotted black;">Report</b> : Compile entire workflow, methodologies and insights 
+                    into a comprehensive and meaningful report with visual aids.</li>
+                </ul>
+            </div><!-- Objectives closing div-->
+            <div class="Flowchart" id="Flowchart">
+                <h2 class="Flowchart-Title">FlowChart</h2>
+            <iframe width="100%" height="600px" scrolling="yes" frameborder="no" src="https://www.taskade.com/embed/aH5vU1q8HREuEcRb?as=orgchart&share=view&view=LEwfkhd6tPVEi8YT&theme=dark&coverImageType=background">
+            </iframe>  
+            <p class="Flowchart-Content" style="text-align: end;">Interactive FlowChart to display methodology overview.</p>          
+            </div><!--Flowchart div end-->
+            <div class="Methodology" id="Methodology">
+                <h2 class="Methodology-Title">Methodology Details</h2>
+                <h2>Step 1: Web-Scraping Using Selenium & BeautifulSoup :-</h2>
+                <p class="Methodology-Content">A) For the National Seat Distribution of the parties, the table was hosted on this 
+                    <a href="https://results.eci.gov.in/PcResultGenJune2024/index.htm">url.</a> Scraping this 
+                    table was relatively easy, using BeautifulSoup.</p>
+                    <p class="Methodology-Content">The specific script can be found in the file "Initial.py"</p>
+                    <p class="Methodology-Content">=> Here is a screenshot of the code: 
+                        <img src="pictures_HTML/pic1.png"></p>
+                <p class="Methodology-Content">B) For seat distribution of every state, I had to automate the 
+                    WebScraping behaviour. Using Selenium to mimic user interaction with the website, I had 
+                    to select the states from the dropdown and scrape the table on the new website which is 
+                    generated, and then return to the previous page again to select the next option and repeat 
+                    the scraping process.
+                </p>
+                <p class="Methodology-Content">This Specific script can be found in "drop_down.py"
+                </p>
+                <p class="Methodology-Content">=> Here is a screenshot of the code:
+                    <img src="pictures_HTML/pic2.png">
+                </p>
+                <p class="Methodology-Content">C) For every party in every state, I also scraped the details 
+                    about which constituency the party has managed to secure a seat in, the candidate's name, 
+                    the total votes he/she has recieved, and the margin of their votes. This was by far the 
+                    toughest script I have written, due to loops, multiple go-back statements, and refetching
+                    due to StaleElement errors. It obviously required a lot of space and time.
+                    The script generates a directory of each state, along with individual csv files for each party.
+                </p>
+                <p class="Methodology-Content">The specific script can be found in the file "Next_scene.py"</p>
+                <p class="Methodology-Content">=> Here is a screenshot of the code:
+                    <img src="pictures_HTML/pic3.png" style="width: 75%;">
+                </p>
+<br>
+<br>
+                <h2>Step 2: Data Processing & Mining :-</h2>
+                <p class="Methodology-Content">
+                    A) Merging state-wise constituency winnings to create a consolidated list of all 543 constituencies,
+                    along with the following details :- 
+                    <ul>
+                        <li><b>State</b> in which the constituency is situated.</li>
+                        <li><b>Candidate</b> who has won.</li>
+                        <li><b>Party</b> which the candidate belongs to.</li>
+                        <li><b>Total Votes</b> recieved by the candidate.</li>
+                        <li><b>Majority voted</b> by which he/she has won</li>
+                    </ul>
+                </p>
+                <p class="Methodology-Content">
+                    The specific script can be found in the file "merge.py"
+                    <br><br>
+                    => Here is a screenshot of the code: 
+                    <img src="pictures_HTML/pic4.png">
+                </p>
+                <p class="Methodology-Content">
+                    B) I also created a list containing parties who have gathered the most seats in every state.
+                    This was imperative to visualize the majority in each state, and it's effect on the 
+                    National Seat distribution.
+                    <br><br>
+                    The specific script can be found in the file "leading.py"
+                    <br><br>
+                    => Here is a screenshot of the code:
+                    <img src="pictures_HTML/pic5.png">
+                </p>
+                <p class="Methodology-Content">
+                    C) Finally, to see the Top performers in every state I made a script. Additionally, if there 
+                    are ties in the number of seats, then all parties with the same number of seats are included in the
+                    file. 
+                    <br><br>
+                    The specific script can be found in the file "State_competition.py"
+                    <br><br>
+                    => Here is a screenshot of the code:
+                    <img src="pictures_HTML/pic6.png">
+                </p>
+                <h2>Step 3: Data Visualization :-</h2>
+                <p class="Methodology-Content">
+                    The scraped and processed data was used to visualize data using different charts.
+                    Tableau was a really helpful tool in making interactive dashboards, and it made 
+                    uuncovering insights very easy. 
+                    <br><br>
+                    The visualizations are depicted in the Insights section of this report.
+                </p>
+            </div><!--Methodology closing div-->
+            <div class="Insights" id="Insights">
+                <h1 class="Insights-Title">Insights Derived</h1>
+            </div><!--Insight closing div-->
+            <div class="Conclusion" id="Conclusion">
+                <h2 class="Conclusion-Title">Conclusion</h2>
+                <p class="Conclusion-Content">
+                    Thus, we see the trends in the Lok Sabha Elections in the year 2024, and derive certain 
+                    insights, with the help of interactive visualizations. The visualizations build in tableau
+                    are embedded to give users the ability to interact with the dashboard and understand the 
+                    distribution of seats and votes in state, leading up to the national seat statistics.
+                </p>
+                <p class="Conclusion-Content">
+                    This task thus, required the use of various tools, a comprehensive study of election results,
+                    and the structure of the ECI Website. 
+                </p>
+                <p class="Conclusion-Content">
+                    By leveraging advanced data processing and visualization techniques, this project aims to 
+                    provide a clear and insightful view of the electoral landscape, contributing valuable knowledge
+                    to the field of political analysis and public awareness.
+                    <br><br>
+                    I thank Kalvium for giving me this task, and I am open to feedback and further discussions on how to 
+                    make my analysis better!
+                </p>
+            </div><!--Conclusion closing div-->
+    </div>
+</body>
+</html>
