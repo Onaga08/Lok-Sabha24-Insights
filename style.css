@@ -26,19 +26,19 @@ body {
     text-align:end
 }
 .Abstract, .Contents, .Problem_Statement, .Objectives, .Flowchart, .Methodology, 
-.Insights, .Conclusion{
+.Insights, .Conclusion, .Bonus{
     padding: 4px;
     border: 3px solid black;
     margin: 30px;
 }
 .Abstract-Title, .Contents-Title, .Problem_Statement-Title, 
-.Objectives-Title, .Flowchart-Title, .Methodology-Title, .Insights-Title, .Conclusion-Title{
+.Objectives-Title, .Flowchart-Title, .Methodology-Title, .Insights-Title, .Conclusion-Title, .Bonus-Title{
     text-decoration: underline 2px solid black;
     text-align: center;
     font-size: 30px;
 }
 .Abstract-Content, .Contents-Content, .Problem_Statement-Content, .Objectives-Content, 
-.Flowchart-Content, .Methodology-Content, .Conclusion-Content, .Insights-Content{
+.Flowchart-Content, .Methodology-Content, .Conclusion-Content, .Insights-Content, .Bonus-Content{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
     margin: 3px;
@@ -51,13 +51,15 @@ body {
     padding: 3px;
     margin: 3px ;
 }
-a:hover{
+.cont:hover{
     color: red;
     background-color: rgba(49, 4, 4, 0.139);
     border-radius: 20%;
 }
 .Contents-Content, .Objectives-Content{
     line-height: 40px;
+    padding-left: 20px;
+    margin-left: 10px;
 }
 img{
     width: 65%;
@@ -68,4 +70,22 @@ img{
     content: '★'; 
     color: gold; 
     margin-right: 10px; 
+}
+
+.navbar {
+    display: flex;
+    align-items: end;
+    padding: 10px;
+}
+.navbar-items{
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    list-style-type: none;
+}
+.navbar-ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  
 }
