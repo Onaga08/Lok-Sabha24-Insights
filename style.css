@@ -41,6 +41,8 @@ body {
 .Flowchart-Content, .Methodology-Content, .Conclusion-Content, .Insights-Content{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
+    margin: 3px;
+    padding: 3px;
 }
 .Tableau-Description{
 
